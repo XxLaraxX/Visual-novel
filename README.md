@@ -2,7 +2,7 @@
 A FUDGE module for the easy development of interactive stories, visual novels and simple adventure games
 
 <a href="https://xxlaraxx.github.io/Visual-novel/Template/Template.html">Novel spielen</a>
-<a href="">Konzept<//https://github.com/XxLaraxX/Visual-novel/blob/main/Visual_Novel_Konzept.pdfa>
+<a href="">Konzept<https://github.com/XxLaraxX/Visual-novel/blob/main/Visual_Novel_Konzept.pdf</a>
 <a href="">Code</a>
 
 # Reference
