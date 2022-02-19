@@ -95,8 +95,8 @@ namespace Template {
         await ƒS.update(0.5);
 
 
-
-        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5);
+        await ƒS.Sound.fade(sound.OutsideTheme, 0, 0.5,);
+        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5,true );
         await ƒS.Location.show(locations.wald);
         await ƒS.update(1);
         await ƒS.Speech.show();
@@ -150,8 +150,6 @@ namespace Template {
 
         await ƒS.Location.show(locations.white);
 
-
-        await ƒS.Sound.play(sound.click, 0.5, false);
 
         await ƒS.update(0.1);
         await ƒS.Location.show(locations.leiche);
