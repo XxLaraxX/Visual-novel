@@ -1,6 +1,6 @@
 namespace Template {
     export async function Scene11(): ƒS.SceneReturn {
-     
+
 
 
 
@@ -23,16 +23,16 @@ namespace Template {
 
         await ƒS.Speech.tell(characters.addie, text.Addie.scene2.T0000);
         await ƒS.update(0.5);
-      
+
 
 
         await ƒS.Character.hide(characters.gideon);
         await ƒS.Character.show(characters.gideon, characters.gideon.pose.shocked, ƒS.positionPercent(35, 100));
         await ƒS.update(1);
-       
+
         await ƒS.Speech.tell(characters.gideon, text.Gideon.scene2.T0000);
         await ƒS.update(0.5);
-       
+
 
         await ƒS.Speech.tell(characters.addie, text.Addie.scene2.T0001);
         await ƒS.update(0.5);
@@ -96,7 +96,8 @@ namespace Template {
 
 
         await ƒS.Sound.fade(sound.OutsideTheme, 0, 0.5,);
-        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5,true );
+
+        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5, true);
         await ƒS.Location.show(locations.wald);
         await ƒS.update(1);
         await ƒS.Speech.show();
@@ -135,7 +136,8 @@ namespace Template {
 
 
 
-
+        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5, true);
+        await ƒS.update(0.5);
 
         await ƒS.Location.show(locations.leiche);
         await ƒS.update(5);

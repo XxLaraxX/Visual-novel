@@ -529,12 +529,12 @@ var Template;
 var Template;
 (function (Template) {
     async function Ende2() {
+        console.log("ending 2");
         await Template.ƒS.Speech.hide();
         await Template.ƒS.Character.hideAll();
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende2);
         await Template.ƒS.update(5);
-        console.log("ending 2");
         //Temporärer fix, dass das Novel nicht neustartet.
         let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
         await pressK();
@@ -544,12 +544,12 @@ var Template;
 var Template;
 (function (Template) {
     async function Ende3() {
+        console.log("ending 3");
         await Template.ƒS.Speech.hide();
         await Template.ƒS.Character.hideAll();
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende3);
         await Template.ƒS.update(5);
-        console.log("ending 3");
         //Temporärer fix, dass das Novel nicht neustartet.
         let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
         await pressK();
@@ -559,12 +559,12 @@ var Template;
 var Template;
 (function (Template) {
     async function Ende4() {
+        console.log("ending 4");
         await Template.ƒS.Speech.hide();
         await Template.ƒS.Character.hideAll();
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende4);
         await Template.ƒS.update(5);
-        console.log("ending 4");
         //Temporärer fix, dass das Novel nicht neustartet.
         let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
         await pressK();
@@ -791,6 +791,8 @@ var Template;
         Template.ƒS.Character.animate(Template.characters.gideon, Template.characters.gideon.pose.sad, Template.fromLeftOutToPos());
         await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.gideon, Template.text.Gideon.scene2.T0009);
+        await Template.ƒS.update(0.5);
+        await Template.ƒS.Sound.fade(Template.sound.MysteriousTheme, 0.5, 0.5, true);
         await Template.ƒS.update(0.5);
         await Template.ƒS.Location.show(Template.locations.leiche);
         await Template.ƒS.update(5);
