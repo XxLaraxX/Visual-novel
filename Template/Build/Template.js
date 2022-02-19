@@ -967,7 +967,8 @@ var Template;
         await Template.ƒS.Speech.hide();
         await Template.ƒS.Location.show(Template.locations.chapter9);
         await Template.ƒS.update(5);
-        await Template.ƒS.Sound.fade(Template.sound.MysteriousTheme, 0.5, 0.5);
+        await Template.ƒS.Sound.fade(Template.sound.OutsideTheme, 0, 0.5);
+        await Template.ƒS.Sound.fade(Template.sound.MysteriousTheme, 0.5, 0.5, true);
         await Template.ƒS.Location.show(Template.locations.mansion);
         await Template.ƒS.update(1);
         await Template.ƒS.Speech.show();
@@ -1068,18 +1069,22 @@ var Template;
             await Template.ƒS.update(1);
             return Template.Ende3();
         }
-        if (Template.GetPointsViktor() < Template.GetPointsGideon()) {
+        else if (Template.GetPointsViktor() < Template.GetPointsGideon()) {
             // Ending Gideon Vertraut
             await Template.ƒS.update(1);
             return Template.Ende2();
         }
-        if (Template.GetPointsGideon() == 0 && Template.GetPointsViktor() == 0) {
+        else if (Template.GetPointsGideon() == 0 && Template.GetPointsViktor() == 0) {
             // Ending Keinem Vertraut
             await Template.ƒS.update(1);
             return Template.Ende4();
         }
-        if (Template.GetPointsGideon() == 4 && Template.GetPointsViktor() == 4) {
+        else if (Template.GetPointsGideon() == 4 && Template.GetPointsViktor() == 4) {
             // Ending Beide Vertraut
+            await Template.ƒS.update(1);
+            return Template.Ende1();
+        }
+        else {
             await Template.ƒS.update(1);
             return Template.Ende1();
         }

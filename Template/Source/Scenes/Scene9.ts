@@ -6,7 +6,8 @@ namespace Template {
 
         await ƒS.Location.show(locations.chapter9);
         await ƒS.update(5);
-        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5);
+        await ƒS.Sound.fade(sound.OutsideTheme, 0, 0.5,);
+        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5,true);
         await ƒS.Location.show(locations.mansion);
         await ƒS.update(1);
         await ƒS.Speech.show();
@@ -161,7 +162,7 @@ namespace Template {
             return Ende3();
         }
 
-        if (GetPointsViktor() < GetPointsGideon()) {
+     else   if (GetPointsViktor() < GetPointsGideon()) {
             // Ending Gideon Vertraut
             await ƒS.update(1);
             return Ende2();
@@ -169,7 +170,7 @@ namespace Template {
 
 
 
-        if (GetPointsGideon() == 0 && GetPointsViktor() == 0) {
+    else    if (GetPointsGideon() == 0 && GetPointsViktor() == 0) {
             // Ending Keinem Vertraut
             await ƒS.update(1);
             return Ende4();
@@ -178,10 +179,15 @@ namespace Template {
 
 
 
-    if (GetPointsGideon() == 4 && GetPointsViktor() == 4) {
+  else  if (GetPointsGideon() == 4 && GetPointsViktor() == 4) {
         // Ending Beide Vertraut
         await ƒS.update(1);
         return Ende1();
+    }
+    else{
+              
+               await ƒS.update(1);
+               return Ende1(); 
     }
 
 
