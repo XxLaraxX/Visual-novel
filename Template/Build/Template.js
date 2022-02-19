@@ -1070,6 +1070,7 @@ var Template;
                 await Template.ƒS.Speech.tell(Template.characters.V, Template.text.V.scene4.T0009);
                 break;
         }
+        console.log(Template.GetPointsViktor() + " " + Template.GetPointsGideon);
         if (Template.GetPointsViktor() > Template.GetPointsGideon()) {
             //Ending Viktor vertraut
             await Template.ƒS.update(1);
