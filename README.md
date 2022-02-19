@@ -1,6 +1,9 @@
 # FUDGE_Story
 A FUDGE module for the easy development of interactive stories, visual novels and simple adventure games
 
+<a href="https://xxlaraxx.github.io/Visual-novel/Template/Template.html">Novel spielen</a>
+<a href="">Konzept</a>
+<a href="">Code</a>
 
 # Reference
 - [APIs](https://jirkadelloro.github.io/FUDGE_Story/Documentation/Reference/#fudge-story-reference)
