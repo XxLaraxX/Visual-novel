@@ -206,9 +206,9 @@ var Template;
 (function (Template) {
     Template.sound = {
         // music
-        BackgroundTheme: "./Audio/Time for Rest.ogg",
-        OutsideTheme: "./Audio/Town Square Well.wav",
-        MysteriousTheme: "./Audio/Weird SItuation.ogg",
+        BackgroundTheme: "./Audio/Time_for_Rest.ogg",
+        OutsideTheme: "./Audio/Town_Square_Well.wav",
+        MysteriousTheme: "./Audio/Weird_Situation.ogg",
         // sound
         click: ""
     };
