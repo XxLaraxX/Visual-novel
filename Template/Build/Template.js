@@ -519,6 +519,9 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende1);
         await Template.ƒS.update(5);
+        //Temporärer fix, dass das Novel nicht neustartet.
+        let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
+        await pressK();
     }
     Template.Ende1 = Ende1;
 })(Template || (Template = {}));
@@ -530,6 +533,9 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende2);
         await Template.ƒS.update(5);
+        //Temporärer fix, dass das Novel nicht neustartet.
+        let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
+        await pressK();
     }
     Template.Ende2 = Ende2;
 })(Template || (Template = {}));
@@ -541,6 +547,9 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende3);
         await Template.ƒS.update(5);
+        //Temporärer fix, dass das Novel nicht neustartet.
+        let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
+        await pressK();
     }
     Template.Ende3 = Ende3;
 })(Template || (Template = {}));
@@ -552,6 +561,9 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende4);
         await Template.ƒS.update(5);
+        //Temporärer fix, dass das Novel nicht neustartet.
+        let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
+        await pressK();
     }
     Template.Ende4 = Ende4;
 })(Template || (Template = {}));
