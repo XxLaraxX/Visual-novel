@@ -17,7 +17,7 @@ namespace Template {
 
             },
             scene2: {
-                T0000: "...also die Zeituhren haben ein GPS Track System, selbst durch die Zeit scheint es noch zu funktioniert.Somit können Dad und die anderen feststellen wo jeder einzelne von uns Zeitreisende sich gerade befindet, ich hab mir in der Nacht kurz einen Blick auf das System erlaubt...  ",
+                T0000: "...Also die Zeituhren haben ein GPS Track System, selbst durch die Zeit scheint es noch zu funktioniert.Somit können Dad und die anderen feststellen wo jeder einzelne von uns Zeitreisende sich gerade befindet, ich hab mir in der Nacht kurz einen Blick auf das System erlaubt...  ",
                 T0001: "Tja was denkst du wohl ? Deine Lieblingsschwester hat dafür gesorgt dass das komplette System ein total versagen hat,die werden erstmal beschäftigt sein und können außerdem nicht nachverfolgen zu welcher Zeit wir an welchem Ort sind.",
                 T0002: "Du hast es erfasst.",
                 T0003: "Ok hier sollte uns niemand sehen,bist du bereit.",
@@ -27,7 +27,7 @@ namespace Template {
                 T0007: "und schon was gefunden ?",
                 T0008: "Gideon was ist los ? ",
                 T0009: "AH...aber wie ist das Möglich ? sein Zeitreisegerät es ist in unserer Zeit,ich hab es gesehen als ich nach dem GPS deiner Uhr aussschau gehalten habe.",
-                T0010: "ja ...du hast wahrscheinlich recht ....aber schau sein Zeitreisegerät ...es ist auch nichtmehr dort.",
+                T0010: "Ja ...du hast wahrscheinlich recht ....aber schau sein Zeitreisegerät ...es ist auch nichtmehr dort.",
                 T0011: "Wer war das ? ",
                 T0012: "Da war gerade jemand....huh hier liegt etwas auf dem Boden ",
                 T0013: "Entschuldige....Lass uns springen. ",
@@ -59,7 +59,7 @@ namespace Template {
             scene4: {
 
                 T0000: "Ich weiß nicht aber möglich ist es schon... ",
-                T0001: "....möglich ",
+                T0001: "....Möglich ",
                 T0002: " Dahinten. ",
                 T0003: "Okay .... ",
                 T0004: "Hey stehen bleiben  ",
@@ -113,15 +113,15 @@ namespace Template {
             scene3_1: {
 
                 T0000: "Am Tatort bist du verrückt du lässt dort deine Fingerabdrücke ",
-                T0001: " ja zeig mal her  ",
-                T0002: " mhmm Mike war hier .... das heißt du hast wahrscheinlich recht mit deiner Vermutung lass uns keine Zeit verlieren. ",
+                T0001: " Ja zeig mal her  ",
+                T0002: " Mhmm Mike war hier .... das heißt du hast wahrscheinlich recht mit deiner Vermutung lass uns keine Zeit verlieren. ",
             },
 
 
             scene3_2: {
 
                 T0000: "Das geht nicht Addie,wir muessten ihm andernfalls auch von meiner verlorenen Yeituhr erzählen",
-                T0001: " für dich vielleicht. ",
+                T0001: " Für dich vielleicht. ",
                 T0002: "Super ",
                 T0003: "Du würdest mir so in den Rücken fallen ?  ",
             },
@@ -129,7 +129,7 @@ namespace Template {
             scene4: {
 
                 T0000: "Denkst du er folgt uns ? ",
-                T0001: " und denkst du wir finden noch eine Leiche ?   ",
+                T0001: " Und denkst du wir finden noch eine Leiche ?   ",
                 T0002: " Ich bin sowas von nicht bereit dafür.... ",
                 T0003: " Lisa...",
                 T0004: " Sie ist auch nichtmehr da.",
