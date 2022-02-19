@@ -3,7 +3,7 @@ namespace Template {
 
         await ƒS.Speech.hide();
 
-        await ƒS.Sound.fade(sound.OutsideTheme, 0.5, 0.5);
+        await ƒS.Sound.fade(sound.OutsideTheme, 0.5, 0.5, true);
         await ƒS.Location.show(locations.gasse1);
         await ƒS.update(1);
         await ƒS.Speech.show();

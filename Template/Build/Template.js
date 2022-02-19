@@ -571,7 +571,7 @@ var Template;
 (function (Template) {
     async function Scene10() {
         await Template.ƒS.Speech.hide();
-        await Template.ƒS.Sound.fade(Template.sound.OutsideTheme, 0.5, 0.5);
+        await Template.ƒS.Sound.fade(Template.sound.OutsideTheme, 0.5, 0.5, true);
         await Template.ƒS.Location.show(Template.locations.gasse1);
         await Template.ƒS.update(1);
         await Template.ƒS.Speech.show();
@@ -702,7 +702,7 @@ var Template;
         await Template.ƒS.Speech.hide();
         await Template.ƒS.Location.show(Template.locations.chapter11);
         await Template.ƒS.update(5);
-        await Template.ƒS.Sound.fade(Template.sound.OutsideTheme, 0.5, 0.5);
+        await Template.ƒS.Sound.fade(Template.sound.OutsideTheme, 0.5, 0.5, true);
         await Template.ƒS.Location.show(Template.locations.gehweg);
         await Template.ƒS.update(1);
         await Template.ƒS.Speech.show();

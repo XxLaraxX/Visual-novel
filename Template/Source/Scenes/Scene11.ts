@@ -9,7 +9,7 @@ namespace Template {
 
         await ƒS.Location.show(locations.chapter11);
         await ƒS.update(5);
-        await ƒS.Sound.fade(sound.OutsideTheme, 0.5, 0.5);
+        await ƒS.Sound.fade(sound.OutsideTheme, 0.5, 0.5, true);
         await ƒS.Location.show(locations.gehweg);
         await ƒS.update(1);
         await ƒS.Speech.show();
