@@ -222,12 +222,14 @@ namespace Template {
 
 
     let scenes: ƒS.Scenes = [
+      { scene: Scene12, name: "Scene12" },
+      { scene: Scene11, name: "Scene11" },
       { scene: Scene10, name: "Scene10" },
-      { scene: Scene10_2, name: "Scene10_1" },
+      { scene: Scene10_1, name: "Scene10_1" },
       { scene: Scene10_2, name: "Scene10_2" },
       { scene: Scene9, name: "Scene9" },
-      { scene: Scene11, name: "Scene11" },
-      { scene: Scene12, name: "Scene12" },
+     
+      
    
      
     ];

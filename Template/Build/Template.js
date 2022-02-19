@@ -139,12 +139,12 @@ var Template;
         gameMenu =
             Template.ƒS.Menu.create(Template.inGameMenu, buttonFunctionalities, "gameMenu");
         let scenes = [
+            { scene: Template.Scene12, name: "Scene12" },
+            { scene: Template.Scene11, name: "Scene11" },
             { scene: Template.Scene10, name: "Scene10" },
-            { scene: Template.Scene10_2, name: "Scene10_1" },
+            { scene: Template.Scene10_1, name: "Scene10_1" },
             { scene: Template.Scene10_2, name: "Scene10_2" },
             { scene: Template.Scene9, name: "Scene9" },
-            { scene: Template.Scene11, name: "Scene11" },
-            { scene: Template.Scene12, name: "Scene12" },
         ];
         let uiElement = document.querySelector("[type=interface]");
         Template.dataForSave = Template.ƒS.Progress.setData(Template.dataForSave, uiElement);
