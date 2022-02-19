@@ -9,7 +9,7 @@ namespace Template {
     await ƒS.Location.show(locations.ende1);
     await ƒS.update(5);
 
-
+console.log("ending 1");
     //Temporärer fix, dass das Novel nicht neustartet.
     let pressK: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.getKeypress(ƒ.KEYBOARD_CODE.K)]); await pressK();
 

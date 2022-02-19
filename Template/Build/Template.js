@@ -519,6 +519,7 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende1);
         await Template.ƒS.update(5);
+        console.log("ending 1");
         //Temporärer fix, dass das Novel nicht neustartet.
         let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
         await pressK();
@@ -533,6 +534,7 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende2);
         await Template.ƒS.update(5);
+        console.log("ending 2");
         //Temporärer fix, dass das Novel nicht neustartet.
         let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
         await pressK();
@@ -547,6 +549,7 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende3);
         await Template.ƒS.update(5);
+        console.log("ending 3");
         //Temporärer fix, dass das Novel nicht neustartet.
         let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
         await pressK();
@@ -561,6 +564,7 @@ var Template;
         await Template.ƒS.update();
         await Template.ƒS.Location.show(Template.locations.ende4);
         await Template.ƒS.update(5);
+        console.log("ending 4");
         //Temporärer fix, dass das Novel nicht neustartet.
         let pressK = Template.ƒS.Progress.defineSignal([() => Template.ƒS.getKeypress(Template.ƒ.KEYBOARD_CODE.K)]);
         await pressK();
@@ -742,7 +746,7 @@ var Template;
         await Template.ƒS.update(0.5);
         await Template.ƒS.Location.show(Template.locations.zeitreise);
         await Template.ƒS.update(5);
-        await Template.ƒS.Sound.fade(Template.sound.MysteriousTheme, 0.5, 0.5);
+        await Template.ƒS.Sound.fade(Template.sound.MysteriousTheme, 0.5, 0.5, true);
         await Template.ƒS.Location.show(Template.locations.gasse2);
         await Template.ƒS.update(1);
         await Template.ƒS.Speech.show();
@@ -964,11 +968,11 @@ var Template;
 var Template;
 (function (Template) {
     async function Scene9() {
+        await Template.ƒS.Sound.fade(Template.sound.OutsideTheme, 0, 0);
         await Template.ƒS.Speech.hide();
         await Template.ƒS.Location.show(Template.locations.chapter9);
         await Template.ƒS.update(5);
-        await Template.ƒS.Sound.fade(Template.sound.OutsideTheme, 0, 0.5);
-        await Template.ƒS.Sound.fade(Template.sound.MysteriousTheme, 0.5, 0.5, true);
+        await Template.ƒS.Sound.fade(Template.sound.MysteriousTheme, 0.5, 0.1, true);
         await Template.ƒS.Location.show(Template.locations.mansion);
         await Template.ƒS.update(1);
         await Template.ƒS.Speech.show();

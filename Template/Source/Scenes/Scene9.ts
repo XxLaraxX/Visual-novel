@@ -1,13 +1,13 @@
 namespace Template {
     export async function Scene9(): ƒS.SceneReturn {
 
-
+        await ƒS.Sound.fade(sound.OutsideTheme, 0, 0,);
         await ƒS.Speech.hide();
 
         await ƒS.Location.show(locations.chapter9);
         await ƒS.update(5);
-        await ƒS.Sound.fade(sound.OutsideTheme, 0, 0.5,);
-        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.5,true);
+       
+        await ƒS.Sound.fade(sound.MysteriousTheme, 0.5, 0.1,true);
         await ƒS.Location.show(locations.mansion);
         await ƒS.update(1);
         await ƒS.Speech.show();
