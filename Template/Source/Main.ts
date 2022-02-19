@@ -2,93 +2,210 @@ namespace Template {
   export import ƒ = FudgeCore;
   export import ƒS = FudgeStory;
 
+
+
+  // Punktesystem
+  export let minPoints = 0;
+  export let maxPoints = 100;
+  export let pointsGideon = 0;
+  export let pointsViktor= 0;
+
+
+
+
+
+  export function AddPointsViktor(num: number) {
+    if (pointsViktor < maxPoints) {
+      pointsViktor += num;
+    }
+    let character = characters.V;
+    var loader = document.getElementById("points");
+    loader.removeAttribute("style");
+
+
+    loader.innerHTML = character.name +
+     ' fand diese Antwort gut.';
+ 
+     fade();
+
+
+  
+
+  }
+  export function GetPointsViktor(): number {
+
+    return pointsViktor;
+  }
+
+
+
+  export function AddPointsGideon(num: number) {
+    if (pointsGideon < maxPoints) {
+      pointsGideon += num;
+    }
+    let character = characters.gideon;
+    var loader = document.getElementById("points");
+    loader.removeAttribute("style");
+
+
+    loader.innerHTML = character.name +
+     ' fand diese Antwort gut.';
+ 
+     fade();
+
+
+  
+
+  }
+
+  export function GetPointsGideon(): number {
+
+    return pointsGideon;
+  }
+
+
+
+
+
+
+
+
  
 
 
 
 
-  export let sound = {
-    // music
-    backgroundTheme: "",
-
-    // sound
-    click: ""
-  };
 
 
-  export let locations = {
-    arbeitszimmer: {
-      name: "arbeitszimmer",
-      background: "./Images/Backgrounds/arbeitszimmer.png"
-    }
-  };
 
-  // Stilfrage - Eigenen Styleguide für FS veröffentlichen? 
-  export let characters = {
-    narrator: {
-      name: ""
-    },
-    addie: {
-      name: "Addie",
-      origin: ƒS.ORIGIN.BOTTOMCENTER,
-      pose: {
-        normal: "./Images/characters/addie_normal.png",
-      
-      }
-    },
-    gideon: {
-      name: "Gideon",
-      
-      origin: ƒS.ORIGIN.BOTTOMCENTER,
-      pose: {
-        normal: "./Images/characters/gideon_normal.png",
-        happy: "./Images/characters/gideon_happy.png",
+
+
   
-      }
+  function fade(){
+
+     var el = document.getElementById('points');
+
+     setTimeout(function () {
+     el.classList.remove('hide','fade-out');
+    },3000);
+     el.classList.add('fade-in')
+    
+
+    el.classList.add('fade-out');
+    el.classList.remove('fade-in');
+    setTimeout(function () {
+      el.classList.add('hide');
+    },3000);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // MENU - create Menu with buttons
+  let gameMenu: ƒS.Menu;
+
+
+  //  MENU - Audio functions
+
+  let volume: number = 1.0;
+
+  export function incrementSound(): void {
+    if (volume >= 10) {
+      return;
     }
+
+    volume += 0.5;
+    ƒS.Sound.setMasterVolume(volume);
+  }
+
+  export function decrementSound(): void {
+    if (volume <= 0) {
+      return;
+    }
+
+    volume -= 0.5;
+    ƒS.Sound.setMasterVolume(volume);
+  }
+
+  export function showCredits(): void {
+    ƒS.Text.addClass("credits");
+    ƒS.Text.print("Hier könnten jetzt Credits stehen.");
+
+    // showCredits();
+  }
+
+  export let inGameMenu = {
+    save: "Save",
+    load: "Load",
+    close: "Close",
+    turnUpVolume: "+",
+    turndownVolume: "-",
+    credits: "Credits",
+    about: "Controls",
   };
 
-  // Animations
-  // export function jirkaAnimation(): ƒS.AnimationDefinition {
-  //   return {
-  //     start: { translation: ƒS.positions.bottomleft, rotation: -20, scaling: new ƒS.Position(0.5, 1.5), color: ƒS.Color.CSS("white", 0) },
-  //     end: { translation: ƒS.positions.bottomright, rotation: 20, scaling: new ƒS.Position(1.5, 0.5), color: ƒS.Color.CSS("red") },
-  //     duration: 1,
-  //     playmode: ƒS.ANIMATION_PLAYMODE.LOOP
-  //   };
-  // }
 
-  export function fromRightToOutOfCanvas(): ƒS.AnimationDefinition {
-    return {
-      start: { translation: ƒS.positionPercent(30, 100) },
-      end: { translation: ƒS.positionPercent(120, 100) },
-      duration: 1,
-      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
-    };
-  }
-
-  export function fromRightToLeft(): ƒS.AnimationDefinition {
-    return {
-      start: { translation: ƒS.positions.bottomright },
-      end: { translation: ƒS.positions.bottomleft },
-      duration: 1,
-      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
-    };
+  export async function buttonFunctionalities(_option: string): Promise<void> {
+    console.log(_option);
+    switch (_option) {
+      case inGameMenu.save:
+        await ƒS.Progress.save();
+        break;
+      case inGameMenu.load:
+        await ƒS.Progress.load();
+        break;
+      case inGameMenu.close:
+        gameMenu.close();
+        menu = false;
+        break;
+      case inGameMenu.credits:
+        // CREDIT SCENE
+        break;
+      case inGameMenu.turnUpVolume:
+        incrementSound();
+        break;
+      case inGameMenu.turndownVolume:
+        decrementSound();
+    }
   }
 
 
-  export function fromCenterToLeft(): ƒS.AnimationDefinition {
-    return {
-      start: { translation: ƒS.positions.bottomcenter },
-      end: { translation: ƒS.positions.bottomleft },
-      duration: 1,
-      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
-    };
+  let menu: boolean = true;
+  document.addEventListener("keydown", hndKeypress);
+  async function hndKeypress(_event: KeyboardEvent): Promise<void> {
+    switch (_event.code) {
+      case ƒ.KEYBOARD_CODE.F8:
+        await ƒS.Progress.save();
+        break;
+      case ƒ.KEYBOARD_CODE.F9:
+        await ƒS.Progress.load();
+        break;
+      case ƒ.KEYBOARD_CODE.M:
+
+        if (menu) {
+
+          gameMenu.close();
+          menu = false;
+        }
+        else {
+          gameMenu.open();
+          menu = true;
+        }
+        break;
+    }
   }
-   
-
-
-
 
   export let dataForSave = {
 
@@ -96,10 +213,23 @@ namespace Template {
 
 
 
+
   window.addEventListener("load", start);
   function start(_event: Event): void {
+    gameMenu =
+      ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
+
+
+
     let scenes: ƒS.Scenes = [
-      { scene: Scene, name: "Introduction to FS" }
+      { scene: Scene10, name: "Scene10" },
+      { scene: Scene10_2, name: "Scene10_1" },
+      { scene: Scene10_2, name: "Scene10_2" },
+      { scene: Scene9, name: "Scene9" },
+      { scene: Scene11, name: "Scene11" },
+      { scene: Scene12, name: "Scene12" },
+   
+     
     ];
 
 
